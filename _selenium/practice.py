@@ -1,0 +1,12 @@
+from selenium import webdriver
+driver = webdriver.Chrome(r"D:\Aj Files\_selenium\chromedriver.exe")
+driver.get("http://demowebshop.tricentis.com/")
+driver.maximize_window()
+driver.find_element_by_class_name("ico-register").click()
+driver.find_element_by_id("gender-male").click()
+driver.find_element_by_id("FirstName").send_keys("Aj")
+driver.find_element_by_id("LastName").send_keys("Mahi")
+driver.find_element_by_id("Email").send_keys("ajaydevmsd07@gmail.com")
+driver.find_element_by_id("Password").send_keys("03021997")
+driver.find_element_by_id("ConfirmPassword").send_keys("03021997")
+driver.find_element_by_id("register-button").click()

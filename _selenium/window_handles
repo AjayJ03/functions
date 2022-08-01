@@ -1,0 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from time import sleep
+
+driver=webdriver.Chrome()
+driver.get(r'https://www.naukri.com/')
+driver.maximize_window()
+print(driver.window_handles)
+
+driver.find_element("xpath", "//div[text()='Register']").click()
+handles=driver.window_handles
+driver.switch_to.window(handles[1])
+sleep(5)
+driver.find_element("xpath", "//input[@type='file']").send_keys(r"D:\Aj Files\_excel_files\AishwaryaS.docx")
