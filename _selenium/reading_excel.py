@@ -1,6 +1,6 @@
 from xlrd import open_workbook
 
-def read_locators(pagename):
+def read_locators(pagename): # this is for getting locators
     wb=open_workbook(r"D:\Aj Files\_excel_files\file.xlsx")
     ws=wb.sheet_by_name(pagename)  # return address of an object...(mentioned sheet)
     used_rows=ws.nrows  # return total no. of rows present in a sheet... 
@@ -18,7 +18,7 @@ print(read_locators("loginpage"))
 
 # all_sheets=wb.sheet_names()  # for getting all sheet names...
 
-def read_headers(sheet_name, test_case_name):
+def read_headers(sheet_name, test_case_name): # this is for getting headers
     wb=open_workbook(r"D:\Aj Files\_excel_files\testdata.xls")
     ws=wb.sheet_by_name(sheet_name)
     used_rows=ws.nrows
@@ -32,3 +32,8 @@ def read_headers(sheet_name, test_case_name):
 print(read_headers("smoke", "test_payment"))
            
 
+def test(a,b):
+    return a+b
+
+def new(a,b):
+    return a-b
