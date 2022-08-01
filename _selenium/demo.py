@@ -10,6 +10,7 @@ driver.maximize_window()
 class _visibility_of_element_located(visibility_of_element_located):
     
     def __init__(self, locator):
+        """calling parent class constructor"""
         super().__init__(locator)  # initializing parent class constructor
     
     def __call__(self,driver):
